@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Runner3 {
+public class RunnerPt2 {
     
     static int total = 0; // To store the total of the valid multiplications
     static boolean enabled = true; // Initially, mul instructions are enabled
