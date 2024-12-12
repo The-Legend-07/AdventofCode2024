@@ -7,31 +7,6 @@ import java.util.regex.Pattern;
 
 public class Runner {
 	
-//	public static ArrayList<String> extractMul(String line) {
-//		
-//
-//			
-//			ArrayList<String> values = new ArrayList<String>();
-//			
-//			int start = line.indexOf("mul(");
-//			int end = start;
-//			if (line.indexOf(")", start) <= start + 7) {
-//				end = line.indexOf(")", start);
-//			}
-//			
-//			//Stop - if there is no closing ")" then this is not the one we want
-//			
-//			if (end != start) {
-//				System.out.println(line.substring(start, end+1));
-//				values.add( line.substring(start, end+1) );
-//			}
-//			
-//			System.out.println();
-//			return values;
-//			
-//		
-//		
-//	}
 	
 	static int total = 0;
 	
@@ -67,8 +42,6 @@ public class Runner {
 			
 			while(scan.hasNext()) {
 				String current = scan.next();
-			//	System.out.println(current);
-			//	System.out.println("-------------");
 				extractMul(current);
 			}
 			
