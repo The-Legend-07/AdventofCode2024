@@ -53,20 +53,28 @@ public class Runner {
 				int decr = 0;
 				int errors = 0;
 				
+				int total = current.size()-1;
+				
 				
 				for (int i = 0; i < current.size() - 1; i++) {
 					
 					
 					if (Math.abs(current.get(i) - current.get(i+1)) > 3) {
 						errors++;
+						if (errors <= 1) {
+							current.remove(i);
+						}
 					} else if (current.get(i) > current.get(i+1)) {
-						incr++;
+						decr++;
 						//System.out.println("incr: " + incr);
 					} else if (current.get(i) < current.get(i+1)) {
-						decr++;
+						incr++;
 						//System.out.println("decr: " + decr);
 					} else {
 						errors++;
+						if (errors <= 1) {
+							current.remove(i);
+						}
 					}
 					
 					
@@ -75,6 +83,8 @@ public class Runner {
 				System.out.println(errors);
 				if ((incr >= current.size()-1 || decr >= current.size()-1)) {
 					numSafe++;
+					System.out.println(incr);
+					System.out.println(decr);
 					System.out.println("safe");
 				}
 				
